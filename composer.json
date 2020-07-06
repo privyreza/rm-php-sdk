@@ -1,5 +1,5 @@
 {
-    "name": "privyreza/resellme-php-sdk",
+    "name": "privyreza/rm-php-sdk",
     "description": "Resell Domains and Hosting",
     "license": "MIT",
     "require": {
