@@ -60,6 +60,10 @@ class Client
     public function registerDomain($data){
         return $this->client->registerDomain($data);
     }
+
+    public function transferDomain($data){
+        return $this->client->transferDomain($data);
+    }
     
     public function getDomainInfo($data){
         return $this->client->getDomainInfo($data);
