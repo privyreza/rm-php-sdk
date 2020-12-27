@@ -3,7 +3,7 @@ namespace Resellme;
 
 use Pdr\Client;
 
-class Client
+class RMClient
 {
     /**
      * The client for making http calls to api
