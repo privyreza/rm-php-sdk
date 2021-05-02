@@ -4,9 +4,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
-        "guzzlehttp/guzzle": "^6.5",
-        "vlucas/phpdotenv": "^4.0",
-	"privyreza/pdr-php-sdk": "^1.0"
+        "guzzlehttp/guzzle": "^7.0"
     },
     "autoload": {
         "psr-4": {
