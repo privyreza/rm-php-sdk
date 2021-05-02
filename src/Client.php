@@ -1,5 +1,5 @@
 <?php
-namespace Pdr;
+namespace Resellme;
 
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Exception\RequestException;
