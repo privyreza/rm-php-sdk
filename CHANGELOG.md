@@ -1,3 +1,9 @@
+## <small>1.4.1 (2021-05-02)</small>
+
+* fix: Namespace ([19f55b1](https://github.com/privyreza/rm-php-sdk/commit/19f55b1))
+
+
+
 ## 1.4.0 (2021-05-02)
 
 * Preparations to remove pdr sdk ([c48236c](https://github.com/privyreza/rm-php-sdk/commit/c48236c))
