@@ -1,3 +1,9 @@
+## 1.4.0 (2021-05-02)
+
+* Preparations to remove pdr sdk ([c48236c](https://github.com/privyreza/rm-php-sdk/commit/c48236c))
+
+
+
 ## 1.3.0 (2020-12-27)
 
 * Added fex items ([5cdd63a](https://github.com/privyreza/rm-php-sdk/commit/5cdd63a))
