@@ -227,16 +227,12 @@ class Client
     }
     
     public function getDomainInfo($data){
-        $domain_name = $data['domain']['name'];
+        $domain_name = $data['domain'];
         $domainFilter = [
             'name' => $domain_name
         ];
         
         $domain = $this->_get('domains', '', $domainFilter)->data[0]->attributes;
-        
-        print_r($domain);
-        
-        die();
         
         if( is_null ( $domain )){
             // Create domain if it does not exist : TOREMOVE
@@ -263,6 +259,18 @@ class Client
         } else {
             return $domain;
         }
+    }
+
+    public function checkDomainTransfer($data){
+        $domain = null;
+        $domain_name = $data['domain'];
+        $domainFilter = [
+            'name' => $domain_name
+        ];
+        
+        $domain = $this->_get('domains', '', $domainFilter)->data[0]->attributes;
+        
+        return $domain;
     }
 
     public function getWhoisInformation($postData){
