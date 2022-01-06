@@ -1,3 +1,9 @@
+## 2.0.0 (2022-01-06)
+
+* Changed search route ([a35cb75](https://github.com/privyreza/rm-php-sdk/commit/a35cb75))
+
+
+
 ## 1.5.0 (2021-05-04)
 
 
