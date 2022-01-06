@@ -1,3 +1,9 @@
+## <small>2.0.1 (2022-01-06)</small>
+
+* Minor adjustment on the domain search function ([3d3e561](https://github.com/privyreza/rm-php-sdk/commit/3d3e561))
+
+
+
 ## 2.0.0 (2022-01-06)
 
 * Changed search route ([a35cb75](https://github.com/privyreza/rm-php-sdk/commit/a35cb75))
