@@ -71,12 +71,22 @@ class Client
      * Search domain
      * @return Object
      */
-    public function searchDomain($domain){
-        $domain = [
-            "domain" => $domain
+     public function searchDomain($domain) {
+        $url = $this->host . '/api/v1/searches';
+        $options = [
+            "json" => [
+                "domain" => $domain
+            ],
+            "headers" => $this->headers,
+            "http_errors" => false
         ];
 
-        return $this->_post('searches', $domain);
+        $response = $this->client->post(
+            $url,
+            $options
+        );
+
+        return json_decode((string) $response->getBody());
     }
 
      /**
