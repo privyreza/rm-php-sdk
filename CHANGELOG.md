@@ -1,3 +1,8 @@
+## <small>2.1.4 (2022-09-04)</small>
+
+
+
+
 ## <small>2.1.3 (2022-09-04)</small>
 
 * Minor fix ([3bf82ea](https://github.com/privyreza/rm-php-sdk/commit/3bf82ea))

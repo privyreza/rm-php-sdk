@@ -450,10 +450,14 @@ class Client
             }
         }
         
-        try {
-            $response = $this->client->get($url, $options);
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage());
+        $response = $this->client->get($url, $options);
+
+        $code = $response->getStatusCode();
+
+        if ($code == '200' || $code == '201') {
+            return json_decode( ( string ) $response->getBody());
+        } else {
+            throw new \Exception('Error fetching data. ' . ( string ) $response->getBody());
         }
     }
 
@@ -470,14 +474,18 @@ class Client
             "headers" => $this->headers,
             "http_errors" => false
         ];
-        
-        try{
+
         $response = $this->client->post(
             $url, 
             $options
         );
-        } catch(\Exception $e) {
-            throw new \Exception($e->getMessage());
+
+        $code = $response->getStatusCode();
+
+        if ($code == '200' || $code == '201') {
+            return json_decode( ( string ) $response->getBody());
+        } else {
+            throw new \Exception('Error posting data. ' . ( string ) $response->getBody());
         }
     }
 
@@ -502,17 +510,11 @@ class Client
         );
         
         $code = $response->getStatusCode();
-        
-        
-        
-        if ($code == '200' || $code == '201'){
+
+        if ($code == '200' || $code == '201') {
             return json_decode( ( string ) $response->getBody());
         } else {
-            // print_r($data);
-            // echo (( string ) $response->getBody());
-            
-            // die($url);
-            throw new \Exception('ERR' . $code . ' : Error updating data');
+            throw new \Exception('Error updating data. ' . ( string ) $response->getBody());
         }
     }
 
@@ -535,7 +537,8 @@ class Client
             } else {
                 $domainData = [
                     'billing_cycle_id' => 1,
-                    'package_id' => 1
+                    'package_id' => 1,
+                    'domain' => $domain_name,
                 ];
                 
                 $hosting = $this->createHosting($domainData)->data;
