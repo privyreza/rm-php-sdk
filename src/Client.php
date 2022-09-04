@@ -5,6 +5,7 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
+use Resellme\Hosting;
 
 class Client
 {
@@ -535,6 +536,40 @@ class Client
             
             // die($url);
             throw new \Exception('ERR' . $code . ' : Error updating data');
+        }
+    }
+
+    public function createHosting($data) {
+        return $this->_post('hostings', $data);
+    }
+
+    public function provisionHosting($data) {
+        try {
+            $hosting = null;
+            $domain_name = $data['domain'];
+            $hostingFilter = [
+                'name' => $domain_name
+            ];
+
+            $remoteHosting = $this->_get('hostings', '', $hostingFilter)->data;
+
+            if (!empty($remoteHosting)) {
+                $hosting = $remoteHosting[0];
+            } else {
+                $domainData = [
+                    'billing_cycle_id' => 1,
+                    'package_id' => 1
+                ];
+                
+                $hosting = $this->createHosting($domainData)->data;
+            }
+
+            $hostingProvisionLink = 'hostings/' . $hosting->id . '/provision';
+
+            $this->_post($hostingProvisionLink, $data)
+
+        } catch (\Exception $e)) {
+            throw new \Exception('Error creating hosting service. Error: ' $e->getMessage());
         }
     }
 }
