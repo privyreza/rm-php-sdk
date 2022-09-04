@@ -1,3 +1,9 @@
+## 2.1.0 (2022-09-04)
+
+* Added hosting ([366797a](https://github.com/privyreza/rm-php-sdk/commit/366797a))
+
+
+
 ## <small>2.0.1 (2022-01-06)</small>
 
 * Minor adjustment on the domain search function ([3d3e561](https://github.com/privyreza/rm-php-sdk/commit/3d3e561))
