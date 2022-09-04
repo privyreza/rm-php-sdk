@@ -566,7 +566,7 @@ class Client
 
             $hostingProvisionLink = 'hostings/' . $hosting->id . '/provision';
 
-            $this->_post($hostingProvisionLink, $data)
+            $this->_post($hostingProvisionLink, $data);
 
         } catch (\Exception $e)) {
             throw new \Exception('Error creating hosting service. Error: ' $e->getMessage());
