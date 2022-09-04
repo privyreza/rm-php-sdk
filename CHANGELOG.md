@@ -1,3 +1,9 @@
+## <small>2.1.2 (2022-09-04)</small>
+
+* Minor fix guzzle ([2af0d65](https://github.com/privyreza/rm-php-sdk/commit/2af0d65))
+
+
+
 ## <small>2.1.1 (2022-09-04)</small>
 
 * Bump guzzlehttp/guzzle from 6.5.5 to 6.5.8 ([a529332](https://github.com/privyreza/rm-php-sdk/commit/a529332))
