@@ -1,3 +1,9 @@
+## <small>2.1.3 (2022-09-04)</small>
+
+* Minor fix ([3bf82ea](https://github.com/privyreza/rm-php-sdk/commit/3bf82ea))
+
+
+
 ## <small>2.1.2 (2022-09-04)</small>
 
 * Minor fix guzzle ([2af0d65](https://github.com/privyreza/rm-php-sdk/commit/2af0d65))
