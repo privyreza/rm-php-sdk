@@ -450,17 +450,10 @@ class Client
             }
         }
         
-        $response = $this->client->get($url, $options);
-        
-        $code = $response->getStatusCode();
-        
-        if ($code == '200'){
-            return json_decode( ( string ) $response->getBody());
-        } else {
-            //echo (( string ) $response->getBody());
-            
-            // die($url);
-            throw new \Exception('ERR' . $code . ' : Error fetching data for domain');
+        try {
+            $response = $this->client->get($url, $options);
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
         }
     }
 
@@ -478,30 +471,14 @@ class Client
             "http_errors" => false
         ];
         
-         $response = $this->client->post(
+        try{
+        $response = $this->client->post(
             $url, 
             $options
         );
-        
-        $code = $response->getStatusCode();
-            
-        if ($code == '401'){
-            throw new \Exception('Authentiation to registrar failed. Verify your token');
-        } elseif ($code == '500'){
-            throw new \Exception('ERR43 : Domain could not be registered');
-        } elseif ($code == '201' || $code == '200'){
-            // Successful but with custom errors
-            $data = json_decode((string) $response->getBody());
-            
-//            if (! is_null($data->errors)){
-  //              $errors = implode(',', $data->errors);
-    //            
-      //          throw new \Exception($errors);
-        //    }
-            
-            return $data;
+        } catch(\Exception $e) {
+            throw new \Exception($e->getMessage());
         }
-
     }
 
     protected function _patch($resource, $record, $data){
@@ -565,11 +542,12 @@ class Client
             }
 
             $hostingProvisionLink = 'hostings/' . $hosting->id . '/provision';
+            $data = [];
 
-            $this->_post($hostingProvisionLink, $data);
+            return $this->_post($hostingProvisionLink, $data);
 
-        } catch (\Exception $e)) {
-            throw new \Exception('Error creating hosting service. Error: ' $e->getMessage());
+        } catch (\Exception $e) {
+            throw new \Exception('Error creating hosting service. Error: ' . $e->getMessage());
         }
     }
 }
