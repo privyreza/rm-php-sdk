@@ -1,3 +1,9 @@
+## 3.0.0 (2022-10-09)
+
+* Update for php 8 ([1bef349](https://github.com/privyreza/rm-php-sdk/commit/1bef349))
+
+
+
 ## <small>2.1.4 (2022-09-04)</small>
 
 
