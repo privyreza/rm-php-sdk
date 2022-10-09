@@ -527,7 +527,7 @@ class Client
             $hosting = null;
             $domain_name = $data['domain'];
             $hostingFilter = [
-                'name' => $domain_name
+                'domain' => $domain_name
             ];
 
             $remoteHosting = $this->_get('hostings', '', $hostingFilter)->data;

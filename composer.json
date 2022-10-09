@@ -3,7 +3,7 @@
     "description": "Resell Domains and Hosting",
     "license": "MIT",
     "require": {
-        "php": "^7.2",
+        "php": "^8.0",
         "guzzlehttp/guzzle": "^7.0"
     },
     "autoload": {
