@@ -1,3 +1,9 @@
+## <small>2.1.6 (2022-10-10)</small>
+
+* Merge fix ([c697c98](https://github.com/privyreza/rm-php-sdk/commit/c697c98))
+
+
+
 <<<<<<< HEAD
 ## <small>2.1.5 (2022-10-10)</small>
 
