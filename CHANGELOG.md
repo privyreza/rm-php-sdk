@@ -1,3 +1,10 @@
+## <small>2.1.5 (2022-10-10)</small>
+
+* Merge fix ([6c734be](https://github.com/privyreza/rm-php-sdk/commit/6c734be))
+* Update composer.json ([3624d5d](https://github.com/privyreza/rm-php-sdk/commit/3624d5d))
+
+
+
 ## <small>2.1.4 (2022-09-04)</small>
 
 
