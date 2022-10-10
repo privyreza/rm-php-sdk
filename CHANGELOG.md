@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 ## <small>2.1.5 (2022-10-10)</small>
 
 * Merge fix ([6c734be](https://github.com/privyreza/rm-php-sdk/commit/6c734be))
 * Update composer.json ([3624d5d](https://github.com/privyreza/rm-php-sdk/commit/3624d5d))
+=======
+## 3.0.0 (2022-10-09)
+
+* Update for php 8 ([1bef349](https://github.com/privyreza/rm-php-sdk/commit/1bef349))
+>>>>>>> edd3e26 (Release 3.0.0)
 
 
 
