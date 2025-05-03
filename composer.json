@@ -1,6 +1,6 @@
 {
     "name": "privyreza/rm-php-sdk",
-    "description": "Resell Domains and Hosting",
+    "description": "Resell Domains, Hosting, and VPS",
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -10,6 +10,13 @@
         "psr-4": {
             "Resellme\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
     }
 }
-

@@ -1,0 +1,27 @@
+# Composer dependencies
+/vendor/
+
+# PHPUnit test results
+/phpunit.xml
+/phpunit.xml.dist
+/test-results/
+
+# Logs and temporary files
+*.log
+*.cache
+*.tmp
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies (if applicable)
+node_modules/
+
+# Build artifacts
+/build/
